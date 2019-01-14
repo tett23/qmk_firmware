@@ -34,7 +34,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define IGNORE_MOD_TAP_INTERRUPT
 #define PREVENT_STUCK_MODIFIERS
+#define TAPPING_FORCE_HOLD
+#undef  TAPPING_TERM
 #define TAPPING_TERM 800
+
+#undef DEBOUNCING_DELAY
+#define DEBOUNCING_DELAY 5
 
 #undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
