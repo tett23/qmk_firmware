@@ -58,29 +58,36 @@ enum macro_keycodes {
 #define KC_ALTKN ALT_T(KC_LANG1)
 #define KC_CTL_J CTL_T(KC_J)
 #define KC_SFT_SPC SFT_T(KC_SPC)
+#define KC_SFT_ENT SFT_T(KC_ENT)
+#define KC_GUI_BSPC GUI_T(KC_BSPC)
+#define KC_CTL_A CTL_T(KC_A)
+#define KC_CTL_H CTL_T(KC_H)
+#define KC_LOW_TAB LT(_LOWER, KC_TAB)
+#define KC_LOW_ENT LT(_LOWER, KC_ENT)
+#define KC_LOW_BSPC LT(_LOWER, KC_BSPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-        TAB,     Q,     W,     E,     R,     T,                      Y,        U,     I,     O,    P,  BSPC,\
+        GRV,     Q,     W,     E,     R,     T,                      Y,     U,     I,     O,    P,  EQL,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      LCTL,     A,     S,     D,     F,     G,                      H,  J, K,     L,     SCLN,  ENT,\
+      LCTL,      A,     S,     D,     F,     G,                      H,     J,     K,     L,   SCLN,  MINS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT,     Z,     X,     C,     V,     B,                      N,        M,     COMM,  DOT,  SLSH,  QUOT,\
+      XXXXX,     Z,     X,     C,     V,     B,                      N,     M,     COMM,  DOT,  SLSH,  QUOT,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  LGUI, SFT_SPC, LOWER, LOWER, LSFT, ESC\
+                                LGUI, SFT_SPC,  LOWER,    LOWER,  LSFT, ESC\
                               //`--------------------'  `--------------------'
   ),
 
   [_LOWER] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-        GRV,     1,     2,     3,     4,     5,                      6,     7,     8,     9,     0,  EQL,\
+      TAB,     1,     2,     3,     4,     5,                      6,     7,     8,     9,     0,  XXXXX,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      LCTL, XXXXX, XXXXX, LBRC,  RBRC , ASTR,                   LEFT,   DOWN,  UP,   RGHT,  QUOT,  MINS,\
+      LCTL, XXXXX, XXXXX, LBRC,  RBRC , ASTR,                   LEFT,   DOWN,  UP,   RGHT,  QUOT,  XXXXX,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      LSFT, XXXXX, XXXXX, XXXXX, XXXXX, BSLS,                   LBRC,   RBRC, XXXXX, XXXXX, XXXXX, BSLS,\
+      LSFT, XXXXX, XXXXX, LPRN,  RPRN,  BSLS,                   XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  LGUI, LSFT, XXXXX,      ESC,    LSFT, XXXXX\
+                                  LGUI, LSFT,    TAB,    ENT,    LSFT, BSPC\
                               //`--------------------'  `--------------------'
   ),
 
