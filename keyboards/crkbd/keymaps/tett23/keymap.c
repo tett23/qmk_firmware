@@ -66,6 +66,7 @@ enum macro_keycodes {
 #define KC_LOW_TAB LT(_LOWER, KC_TAB)
 #define KC_LOW_ENT LT(_LOWER, KC_ENT)
 #define KC_LOW_BSPC LT(_LOWER, KC_BSPC)
+#define KC_LOW_SPC LT(_LOWER, KC_SPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
@@ -76,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       LGUI,     Z,     X,     C,     V,     B,                      N,     M,     COMM,  DOT,  SLSH,  QUOT,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                SPC, LSFT,    LOWER,    LOWER,  LSFT, ESC\
+                                LGUI, LSFT,    LOW_SPC,    LOWER,  LSFT, ESC\
                               //`--------------------'  `--------------------'
   ),
 
